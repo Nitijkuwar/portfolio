@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/image/nitij.jpg";
+import image from "../assets/image/nitij.JPG";
 import image2 from "../assets/image/nitesh.jpg";
 import { Link } from "react-router-dom";
 import Button from "../component/Button";
