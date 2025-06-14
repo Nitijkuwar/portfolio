@@ -1,11 +1,13 @@
 import React from "react";
 import image from "../assets/image/nitij.png";
 import image2 from "../assets/image/nitesh.jpg";
-import { Link } from "react-router-dom";
-import Button from "../component/Button";
+import Button from "./Button";
 import { FaPhone, FaRegUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import Typewriter from "typewriter-effect";
+import { Link } from "react-scroll";
+
 const Home = () => {
   const skills = [
     { name: "HTML", level: 90, color: "bg-orange-500" },
@@ -25,12 +27,18 @@ const Home = () => {
           <h3 className="text-4xl md:text-8xl lg:text-8xl xl:text-9xl leading-tight md:leading-[1.5]">
             Nitij Kuwar
           </h3>
-
           <div className="text-2xl md:text-6xl lg:text-6xl pb-2">
-            Frontend developer
+            <Typewriter
+              options={{
+                strings: ["Frontend Developer"],
+                autoStart: true,
+                loop: true,
+                delay: 180,
+              }}
+            />
           </div>
 
-          <Button btnStyle="border p-2 font-2xl">
+          <Button btnStyle="border p-3 font-2xl mt-5">
             <Link to="contact">Contact Me</Link>
           </Button>
         </div>
@@ -44,7 +52,7 @@ const Home = () => {
       </div>
       <hr />
       {/* About section */}
-      <section className="pl-10 pr-10" id="about">
+      <section className="p-10" id="about">
         <h2 className="text-4xl font-bold mb-6 text-gray-200 text-center">
           About Me
         </h2>
@@ -87,10 +95,13 @@ const Home = () => {
                 </span>
               </p>
             </div>
+            <a href="/CV.pdf" download>
+              {" "}
+              <Button btnStyle="border text-gray-400 p-3 text-xl font-xl cursor-pointer">
+                Download CV
+              </Button>
+            </a>
 
-            <Button btnStyle="border text-gray-400 p-3 text-xl font-xl cursor-pointer">
-              Download CV
-            </Button>
             <Link to="https://www.facebook.com/">
               <i className="fa-brands fa-facebook text-3xl"></i>
             </Link>
@@ -107,7 +118,7 @@ const Home = () => {
       {/* skills */}
 
       <div
-        className="min-h-screen flex items-center justify-center px-6"
+        className="min-h-screen flex items-center justify-center px-4"
         id="skills"
       >
         <div className="w-full max-w-3xl">
@@ -133,7 +144,7 @@ const Home = () => {
       </div>
       <hr />
       {/* form */}
-      <div className=" mb-10" id="contact">
+      <div className=" mb-10 py-5" id="contact">
         <h2 className="text-center font-bold text-3xl pb-10">Contact</h2>
         {/* Text Section */}
         <div className="flex flex-wrap justify-center lg:flex-nowrap">

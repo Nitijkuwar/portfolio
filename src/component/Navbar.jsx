@@ -36,6 +36,7 @@ const Navbar = () => {
             spy={true}
             offset={-70}
             activeClass="active-link"
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             Home
           </Link>
@@ -46,6 +47,7 @@ const Navbar = () => {
             spy={true}
             offset={-70}
             activeClass="active-link"
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             About
           </Link>
@@ -56,6 +58,7 @@ const Navbar = () => {
             spy={true}
             offset={-70}
             activeClass="active-link"
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             Skills
           </Link>
@@ -66,6 +69,7 @@ const Navbar = () => {
             spy={true}
             offset={-70}
             activeClass="active-link"
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </Link>
@@ -83,6 +87,7 @@ const Navbar = () => {
             offset={-70}
             activeClass="active-link"
             onClick={() => setIsOpen(false)}
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             Home
           </Link>
@@ -94,6 +99,7 @@ const Navbar = () => {
             offset={-70}
             activeClass="active-link"
             onClick={() => setIsOpen(false)}
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             About
           </Link>
@@ -105,6 +111,7 @@ const Navbar = () => {
             offset={-70}
             activeClass="active-link"
             onClick={() => setIsOpen(false)}
+            className="relative text-gray-300 transition-all duration-300 hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             Skills
           </Link>
@@ -116,6 +123,7 @@ const Navbar = () => {
             offset={-70}
             activeClass="active-link"
             onClick={() => setIsOpen(false)}
+            className="relative text-gray-300 transition-all duration-300 after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </Link>
