@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../assets/image/nitij.png";
+import about from "../assets/image/coding.png";
 import Button from "./Button";
 import {
   FaGithub,
@@ -80,6 +81,13 @@ const Home = () => {
       link: "https://nitijkuwar.github.io/ecommerce-js/",
     },
   ];
+  // form textarea
+  const [message, setMessage] = useState("");
+  const maxChars = 800;
+
+  const handleChange = (e) => {
+    setMessage(e.target.value);
+  };
   return (
     <>
       <motion.section
@@ -91,14 +99,13 @@ const Home = () => {
         className="relative flex flex-wrap gap-20 justify-evenly md:justify-evenly py-20"
       >
         <div>
-          <div className="absolute top-[-50px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          <div className="absolute top-[20px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          <div className="absolute top-[40%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          {/* <div className="absolute bottom-[-2px] right-[5%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div> */}
-          <div className="absolute bottom-[50%] right-[70%] w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-        </div>
-
-        <div>
+          <div>
+            <div className="absolute top-[-50px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+            <div className="absolute top-[20px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+            <div className="absolute top-[40%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+            {/* <div className="absolute bottom-[-2px] right-[5%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div> */}
+            <div className="absolute bottom-[50%] right-[70%] w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+          </div>
           <p className="text-5xl">I'm</p>
           <h3 className="text-4xl md:text-8xl lg:text-8xl xl:text-9xl leading-tight md:leading-[1.5]">
             Nitij Kuwar
@@ -118,9 +125,9 @@ const Home = () => {
             smooth={true}
             duration={700}
             offset={-80}
-            className="cursor-none"
+            className="cursor-pointer"
           >
-            <Button btnStyle="cursor-none relative text-white text-lg font-semibold px-6 py-3 mt-5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl shine-button ">
+            <Button btnStyle="cursor-pointer relative text-white text-lg font-semibold px-6 py-3 mt-5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl shine-button ">
               Hire Me
             </Button>
           </Link>{" "}
@@ -135,22 +142,26 @@ const Home = () => {
       </motion.section>
       {/* About section */}
       <motion.section
-        className="relative p-10"
+        className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 px-4 md:px-16 py-10"
         id="about"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div>
-          <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          <div className="absolute top-[-75px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          <div className="absolute top-[35%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          {/* <div className="absolute bottom-[-2px] right-[5%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div> */}
-        </div>
-        <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
-
-        <div className=" p-5 sm:p-10">
+        <img
+          src={about}
+          alt="about"
+          className="rounded-xl w-[250px] h-[250px] md:w-[500px] md:h-[520px] object-cover"
+        />
+        <div className=" p-5 sm:p-10  shadow-xl rounded-xl">
+          <div>
+            <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+            <div className="absolute top-[-75px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+            <div className="absolute top-[35%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+            {/* <div className="absolute bottom-[-2px] right-[5%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div> */}
+          </div>
+          <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
           <p className=" text-xl text-justify leading-[1.6] lg:text-2xl">
             An enthusiastic front-end developer who focusses on utilising
             React.js to create cutting-edge, responsive web apps. I like
@@ -179,8 +190,8 @@ const Home = () => {
               <span className="font-normal">Tankisinwari-1, Budhiganga</span>
             </p>
           </div>
-          <a href="/CV.pdf" download className="cursor-none">
-            <Button btnStyle="cursor-none relative text-white text-lg font-semibold px-6 py-3 mt-5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl shine-button">
+          <a href="/CV.pdf" className="cursor-pointer">
+            <Button btnStyle="cursor-pointer relative text-white text-lg font-semibold px-6 py-3 mt-5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl shine-button">
               Download CV
             </Button>
           </a>
@@ -188,7 +199,7 @@ const Home = () => {
           {socialLinks.map((link, index) => (
             <a key={index} href={link.href}>
               <i
-                className={`${link.iconClass} cursor-none text-3xl p-2 hover:text-blue-600 rounded-full transition duration-300 `}
+                className={`${link.iconClass} text-3xl p-2 hover:text-blue-600 rounded-full transition duration-300 `}
               ></i>
             </a>
           ))}
@@ -304,58 +315,13 @@ const Home = () => {
         <div>
           <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute top-[-80px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          <div className="absolute top-[40%] left-[60%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[1] opacity-90 blur-[3px] animate-pulse"></div>
+          <div className="absolute top-[40%] left-[50%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute bottom-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute bottom-[-2px] right-[1%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
         </div>
         <h2 className="text-center font-bold text-3xl pb-10">Contact</h2>
         {/* Text Section */}
         <div className="flex flex-wrap justify-center gap-25 lg:flex-nowrap">
-          {/* Form Section */}
-          <form
-            action="#"
-            method="POST"
-            className="space-y-4 w-full cursor-default-area cursor-default max-w-md bg-gray-100 p-6 rounded-xl shadow-md text-black border-t-10 border-indigo-500"
-          >
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter your name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-              required
-            />
-            <input
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder="Subject"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Your message"
-              rows="6"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-              required
-            ></textarea>
-            <Button
-              type="submit"
-              btnStyle=" cursor-none w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
-            >
-              Send Message
-            </Button>
-          </form>
-
           <div className="w-full  px-4 md:px-8 lg:px-0 py-0 space-y-8 md:w-[600px]">
             {/* Contact Information */}
             <div className="rounded-xl shadow-md p-6 border-t-10 border-indigo-500">
@@ -412,6 +378,59 @@ const Home = () => {
               </div>
             </div>
           </div>
+          {/* Form Section */}
+          <form
+            action="#"
+            method="POST"
+            className="space-y-4 w-full cursor-default max-w-md bg-gray-100 p-6 rounded-xl shadow-md text-black border-t-10 border-indigo-500"
+          >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+            <div className="w-full max-w-lg">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your message"
+                rows="6"
+                value={message}
+                maxLength={maxChars}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                required
+              ></textarea>
+
+              <div className="text-sm text-gray-600 mt-1 text-right">
+                {message.length} / {maxChars}
+              </div>
+            </div>
+            <Button
+              type="submit"
+              btnStyle=" cursor-pointer w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
+            >
+              Send Message
+            </Button>
+          </form>
         </div>
       </motion.section>
     </>
