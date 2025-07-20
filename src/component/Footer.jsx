@@ -50,7 +50,8 @@ const Footer = () => {
         to="home"
         smooth={true}
         duration={600}
-        className="absolute bottom-3 right-4 z-50 text-white bg-gray-700 hover:bg-blue-500 p-3 rounded-full cursor-pointer transition-transform duration-1000 hover:rotate-360"
+        className="absolute bottom-3 right-4 z-50 text-white bg-gray-700 hover:bg-blue-500 p-3 rounded-full cursor-pointer transition-transform duration-1000
+         hover:rotate-360"
       >
         <FaArrowUp size={25} className="md:text-xl" />
       </Link>

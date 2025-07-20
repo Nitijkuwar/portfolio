@@ -1,6 +1,5 @@
 import React from "react";
 import image from "../assets/image/nitij.png";
-// import image2 from "../assets/image/nitesh.jpg";
 import Button from "./Button";
 import {
   FaGithub,
@@ -25,6 +24,7 @@ import figma from "../assets/image/tools/Figma.png";
 import bootstrap from "../assets/image/tools/Bootstrap.png";
 import portfolio from "../assets/image/projects/portfolio.png";
 import portgenerator from "../assets/image/projects/portgenerator.png";
+import ecommerce from "../assets/image/projects/ecommerce.png";
 import { IoLocationOutline } from "react-icons/io5";
 
 const Home = () => {
@@ -70,6 +70,14 @@ const Home = () => {
       tech1: "HTML/CSS",
       tech2: "JavaScripts",
       link: "https://nitijkuwar.github.io/portfoliogenerator/",
+    },
+    {
+      image: ecommerce,
+      name: "Ecommerce",
+      description: "Built with HTML, TailwindCSS and JavaScripts",
+      tech1: "HTML/TailwindCSS",
+      tech2: "JavaScripts",
+      link: "https://nitijkuwar.github.io/ecommerce-js/",
     },
   ];
   return (
@@ -252,7 +260,7 @@ const Home = () => {
         <p className="text-sm py-5 md:text-2xl">
           Selected work showcasing my frontend development expertise
         </p>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-12">
           {project.map((projects, index) => (
             <a
               href={projects.link}
@@ -303,15 +311,6 @@ const Home = () => {
         <h2 className="text-center font-bold text-3xl pb-10">Contact</h2>
         {/* Text Section */}
         <div className="flex flex-wrap justify-center gap-25 lg:flex-nowrap">
-          {/* <div className=" w-170 bg-[#4a5c5e] text-white content-center rounded-lg lg:w-120 h-120">
-            <p className="text-lg mb-2 ml-20">Hello 👋</p>
-            <h3 className="text-3xl font-semibold ml-20">
-              <span className="text-indigo-300">Please</span> fill up the form
-            </h3>
-            <h3 className="text-3xl font-semibold ml-20">
-              and send the <span className="text-indigo-300">message</span>
-            </h3>
-          </div> */}
           {/* Form Section */}
           <form
             action="#"
