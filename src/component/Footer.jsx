@@ -1,7 +1,28 @@
+import { useEffect, useState } from "react";
 import { FaLinkedin, FaGithub, FaWhatsapp, FaArrowUp } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const Footer = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setShowScrollButton(scrollY > 100);
+    };
+
+    // listen on scroll
+    window.addEventListener("scroll", handleScroll);
+
+    // extra: check scroll again after animation ends (safety)
+    const timeoutId = setTimeout(() => handleScroll(), 400); // 700ms matches duration of scroll
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <footer className="bg-[#1f2937] text-white relative py-8 px-6">
       {/* Top Section */}
@@ -46,15 +67,21 @@ const Footer = () => {
       </div>
 
       {/* Scroll to Top Button */}
-      <Link
-        to="home"
-        smooth={true}
-        duration={600}
-        className="absolute bottom-3 right-4 z-50 text-white bg-gray-700 hover:bg-blue-500 p-3 rounded-full cursor-pointer transition-transform duration-1000
-         hover:rotate-360"
-      >
-        <FaArrowUp size={25} className="md:text-xl" />
-      </Link>
+
+      {showScrollButton && (
+        <Link
+          to="home"
+          smooth={true}
+          duration={600}
+          className="fixed bottom-3 right-4 z-50 text-white bg-gray-700 hover:bg-blue-500 p-3 rounded-full cursor-pointer transition-transform duration-700 hover:rotate-[360deg]"
+          aria-label="Scroll to top"
+          onClick={() => {
+            setTimeout(() => setShowScrollButton(false), 650); // wait for scroll to top
+          }}
+        >
+          <FaArrowUp size={25} />
+        </Link>
+      )}
     </footer>
   );
 };

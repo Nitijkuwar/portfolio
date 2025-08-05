@@ -28,22 +28,23 @@ const Navbar = () => {
         </button>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-10">
+        <ul className="hidden lg:flex gap-10">
           {nav.map((navbar, index) => (
-            <Link
-              key={index}
-              to={navbar.link}
-              smooth={true}
-              duration={500}
-              spy={true}
-              offset={-90}
-              activeClass="active-link"
-              className="relative cursor-default cursor-pointer transition-all duration-700  hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-[#e5e7eb] after:transition-all after:duration-700 hover:after:w-full"
-            >
-              {navbar.name}
-            </Link>
+            <li key={index}>
+              <Link
+                to={navbar.link}
+                offset={-120}
+                duration={500}
+                smooth={true}
+                spy={true}
+                activeClass="active-link"
+                className="relative cursor-pointer transition-all duration-700  hover: after:absolute after:left-0 after:top-10 after:h-[3px] after:w-0 after:bg-[#e5e7eb] after:transition-all after:duration-700 hover:after:w-full"
+              >
+                {navbar.name}
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* Mobile Menu */}

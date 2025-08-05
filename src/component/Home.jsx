@@ -23,6 +23,7 @@ import react from "../assets/image/tools/react.png";
 import tailwind from "../assets/image/tools/tailwind.png";
 import figma from "../assets/image/tools/Figma.png";
 import bootstrap from "../assets/image/tools/Bootstrap.png";
+import vercel from "../assets/image/tools/vercel.png";
 import portfolio from "../assets/image/projects/portfolio.png";
 import portgenerator from "../assets/image/projects/portgenerator.png";
 import ecommerce from "../assets/image/projects/ecommerce.png";
@@ -31,15 +32,15 @@ import { IoLocationOutline } from "react-icons/io5";
 const Home = () => {
   const socialLinks = [
     {
-      href: "https://www.facebook.com/",
+      href: "https://www.facebook.com/niteshkuwar555",
       iconClass: "fa-brands fa-facebook",
     },
     {
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/in/nitij-kuwar/",
       iconClass: "fa-brands fa-linkedin",
     },
     {
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/nitesh_kuwar1/",
       iconClass: "fa-brands fa-instagram",
     },
   ];
@@ -53,6 +54,7 @@ const Home = () => {
     { name: "Git", image: git },
     { name: "Figma", image: figma },
     { name: "Bootstrap", image: bootstrap },
+    { name: "Vercel", image: vercel },
   ];
 
   const project = [
@@ -94,16 +96,15 @@ const Home = () => {
         id="home"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative flex flex-wrap gap-20 justify-evenly md:justify-evenly py-20"
+        className="relative flex flex-wrap gap-20 justify-evenly md:justify-evenly pt-15"
       >
         <div>
           <div>
             <div className="absolute top-[-50px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
             <div className="absolute top-[20px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
             <div className="absolute top-[40%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-            {/* <div className="absolute bottom-[-2px] right-[5%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div> */}
             <div className="absolute bottom-[50%] right-[70%] w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
           </div>
           <p className="text-5xl">I'm</p>
@@ -135,31 +136,28 @@ const Home = () => {
         <img
           src={image}
           alt="nitij image"
-          height="400px"
-          width="400px"
-          className="rounded-full "
+          className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full object-cover"
         />
       </motion.section>
       {/* About section */}
       <motion.section
-        className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 px-4 md:px-16 py-10"
+        className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 px-4 md:px-16 py-10 min-h-screen"
         id="about"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <img
           src={about}
           alt="about"
-          className="rounded-xl w-[250px] h-[250px] md:w-[500px] md:h-[520px] object-cover"
+          className="rounded-xl w-[250px] h-[250px] md:w-[450px] md:h-[460px] object-cover"
         />
         <div className=" p-5 sm:p-10  shadow-xl rounded-xl">
           <div>
             <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
             <div className="absolute top-[-75px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
             <div className="absolute top-[35%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-            {/* <div className="absolute bottom-[-2px] right-[5%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div> */}
           </div>
           <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
           <p className=" text-xl text-justify leading-[1.6] lg:text-2xl">
@@ -208,11 +206,11 @@ const Home = () => {
       {/* skills */}
 
       <motion.section
-        className="relative min-h-screen flex flex-col items-center justify-center px-4 py-9"
+        className="relative min-h-screen flex flex-col items-center justify-center "
         id="skills"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div>
@@ -254,17 +252,17 @@ const Home = () => {
       </motion.section>
       {/* projects */}
       <motion.section
-        className=" relative min-h-screen flex flex-col items-center justify-center px-4 py-15"
+        className=" relative min-h-screen flex flex-col items-center justify-center"
         id="projects"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div>
           <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute top-[20px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          <div className="absolute top-[40%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[1] opacity-90 blur-[3px] animate-pulse"></div>
+          <div className="absolute top-[40%] left-[48%] w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] md:w-[90px] md:h-[90px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute bottom-[30%] right-[1%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[110px] md:h-[110px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
         </div>
         <h2 className="font-bold text-5xl">My Projects</h2>
@@ -305,11 +303,11 @@ const Home = () => {
       </motion.section>
       {/* form */}
       <motion.section
-        className="relative mb-10 py-5"
+        className="relative py-5 min-h-screen"
         id="contact"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div>
@@ -319,7 +317,7 @@ const Home = () => {
           <div className="absolute bottom-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute bottom-[-2px] right-[1%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
         </div>
-        <h2 className="text-center font-bold text-3xl pb-10">Contact</h2>
+        <h2 className="text-center font-bold text-3xl p-10">Contact</h2>
         {/* Text Section */}
         <div className="flex flex-wrap justify-center gap-25 lg:flex-nowrap">
           <div className="w-full  px-4 md:px-8 lg:px-0 py-0 space-y-8 md:w-[600px]">
