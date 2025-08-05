@@ -27,6 +27,8 @@ import vercel from "../assets/image/tools/vercel.png";
 import portfolio from "../assets/image/projects/portfolio.png";
 import portgenerator from "../assets/image/projects/portgenerator.png";
 import ecommerce from "../assets/image/projects/ecommerce.png";
+import pla from "../assets/image/projects/pla.png";
+
 import { IoLocationOutline } from "react-icons/io5";
 
 const Home = () => {
@@ -81,6 +83,14 @@ const Home = () => {
       tech1: "HTML/TailwindCSS",
       tech2: "JavaScripts",
       link: "https://nitijkuwar.github.io/ecommerce-js/",
+    },
+    {
+      image: pla,
+      name: "Business Website",
+      description: "Built with HTML, CSS and JavaScripts",
+      tech1: "HTML/CSS",
+      tech2: "JavaScripts",
+      link: "https://nitijkuwar.github.io/plajs/",
     },
   ];
   // form textarea
@@ -141,68 +151,88 @@ const Home = () => {
       </motion.section>
       {/* About section */}
       <motion.section
-        className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 px-4 md:px-16 py-10 min-h-screen"
+        className="relative flex flex-col flex-wrap lg:flex-nowrap md:flex-row items-center justify-center  gap-8 md:gap-12 px-4 sm:px-6 md:px-16 py-10 md:py-16 min-h-screen"
         id="about"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
+        {/* Responsive image */}
         <img
           src={about}
           alt="about"
-          className="rounded-xl w-[250px] h-[250px] md:w-[450px] md:h-[460px] object-cover"
+          className="rounded-xl w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[460px] object-cover"
         />
-        <div className=" p-5 sm:p-10  shadow-xl rounded-xl">
-          <div>
-            <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-            <div className="absolute top-[-75px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-            <div className="absolute top-[35%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
-          </div>
-          <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
-          <p className=" text-xl text-justify leading-[1.6] lg:text-2xl">
-            An enthusiastic front-end developer who focusses on utilising
+
+        {/* Info box */}
+        <div className="relative w-full max-w-3xl bg-white p-5 sm:p-8 shadow-xl rounded-xl">
+          {/* Glowing circles */}
+          <div className="absolute top-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+          <div className="absolute top-[-75px] right-[10px] w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+          <div className="absolute top-[35%] left-[45%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
+
+          {/* Text content */}
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
+            About Me
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-justify leading-relaxed">
+            An enthusiastic front-end developer who focuses on utilizing
             React.js to create cutting-edge, responsive web apps. I like
             transforming concepts into elegant, useful designs, and I'm always
             looking to sharpen my abilities and keep up with emerging
             technologies.
           </p>
-          {/* information */}
-          <div className="text-black text-2xl grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 pt-4 pb-3">
+
+          {/* Info grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 pt-6 pb-4 text-black text-base sm:text-lg">
             <p className="font-bold flex items-center">
-              <FaRegUser className="text-blue-400 mr-2 text-3xl" />
+              <FaRegUser className="text-blue-400 mr-2 text-2xl sm:text-3xl" />
               <span className="font-normal">Nitij Kuwar</span>
             </p>
             <p className="font-bold flex items-center">
-              <MdEmail className="text-blue-400 mr-2 text-3xl" />
+              <MdEmail className="text-blue-400 mr-2 text-2xl sm:text-3xl" />
               <span className="font-normal break-all">
                 nitijkuwar555@gmail.com
               </span>
             </p>
             <p className="font-bold flex items-center">
-              <FaPhone className="text-blue-400 mr-2 text-3xl" />
+              <FaPhone className="text-blue-400 mr-2 text-2xl sm:text-3xl" />
               <span className="font-normal">9815305931</span>
             </p>
             <p className="font-bold flex items-center">
-              <FaLocationDot className="text-blue-400 mr-2 text-3xl" />
+              <FaLocationDot className="text-blue-400 mr-2 text-2xl sm:text-3xl" />
               <span className="font-normal">Tankisinwari-1, Budhiganga</span>
             </p>
           </div>
-          <a href="/CV.pdf" className="cursor-pointer">
-            <Button btnStyle="cursor-pointer relative text-white text-lg font-semibold px-6 py-3 mt-5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl shine-button">
-              Download CV
-            </Button>
-          </a>
 
-          {socialLinks.map((link, index) => (
-            <a key={index} href={link.href}>
-              <i
-                className={`${link.iconClass} text-3xl p-2 hover:text-blue-600 rounded-full transition duration-300 `}
-              ></i>
+          {/* CV download button */}
+          <div className="mt-4">
+            <a href="/CV.pdf" className="inline-block">
+              <Button btnStyle="relative text-white text-lg font-semibold px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl shine-button">
+                Download CV
+              </Button>
             </a>
-          ))}
+          </div>
+
+          {/* Social icons */}
+          <div className="flex gap-4 mt-6">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className={`${link.iconClass} text-2xl sm:text-3xl hover:text-blue-600 transition duration-300`}
+                ></i>
+              </a>
+            ))}
+          </div>
         </div>
       </motion.section>
+
       {/* skills */}
 
       <motion.section
@@ -224,7 +254,7 @@ const Home = () => {
           Technologies and tools I work with
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-9">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9 p-4">
           {tools.map((tool, index) => (
             <motion.div
               key={index}
@@ -269,20 +299,21 @@ const Home = () => {
         <p className="text-sm py-5 md:text-2xl">
           Selected work showcasing my frontend development expertise
         </p>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-12">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-12 px-4 sm:px-6 md:px-16 py-10 md:py-16">
           {project.map((projects, index) => (
-            <a
-              href={projects.link}
-              className="cursor-none relative shadow-md rounded-2xl overflow-hidden h-70 w-full group"
+            <div
+              className="cursor-none shadow-md rounded-2xl overflow-hidden w-full group"
               key={index}
             >
-              <img
-                src={projects.image}
-                alt={projects.name}
-                className="h-60 w-full transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 p-4 bg-opacity-80 w-full">
-                <h3 className="text-xl font-bold md:text-2x">
+              <a href={projects.link}>
+                <img
+                  src={projects.image}
+                  alt={projects.name}
+                  className="h-60 w-full transition-transform duration-700 group-hover:scale-105"
+                />
+              </a>
+              <div className=" p-4 bg-opacity-80 w-full">
+                <h3 className="text-xl font-bold md:text-2x1">
                   {projects.name}
                 </h3>
                 <p className="text-gray-700 text-sm md:text-lg">
@@ -297,13 +328,13 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </motion.section>
       {/* form */}
       <motion.section
-        className="relative py-5 min-h-screen"
+        className="relative min-h-screen p-5"
         id="contact"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -317,33 +348,39 @@ const Home = () => {
           <div className="absolute bottom-[-80px] left-[-40px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
           <div className="absolute bottom-[-2px] right-[1%] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] bg-[linear-gradient(135deg,_#fbcfe8,_#f5d0fe,_#c084fc)] rounded-full z-[-1] opacity-90 blur-[3px] animate-pulse"></div>
         </div>
-        <h2 className="text-center font-bold text-3xl p-10">Contact</h2>
+        <h2 className="text-center font-bold text-5xl p-10">Contact</h2>
         {/* Text Section */}
         <div className="flex flex-wrap justify-center gap-25 lg:flex-nowrap">
           <div className="w-full  px-4 md:px-8 lg:px-0 py-0 space-y-8 md:w-[600px]">
             {/* Contact Information */}
-            <div className="rounded-xl shadow-md p-6 border-t-10 border-indigo-500">
-              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+            <div className="rounded-xl shadow-md p-6 border-t-10 border-indigo-500 h-58">
+              <h2 className="text-2xl md:text-4xl font-semibold mb-4">
                 Contact Information
               </h2>
-              <div className="space-y-4">
-                <p className="text-xl md:text-2xl flex items-center">
-                  <MdOutlineMail className="mr-4 text-3xl md:text-4xl text-pink-600" />
-                  nitijkuwar555@gmail.com
+              <div className="space-y-2 md:space-y-4">
+                <p className="text-base sm:text-lg md:text-2xl flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                  <span className="text-xl sm:text-2xl md:text-4xl text-pink-600">
+                    <MdOutlineMail />
+                  </span>
+                  <span className="break-all">nitijkuwar555@gmail.com</span>
                 </p>
-                <p className="text-xl md:text-2xl flex items-center">
-                  <IoLocationOutline className="mr-4 text-3xl md:text-4xl text-green-600" />
+
+                <p className="text-lg md:text-2xl flex items-center">
+                  <span className="mr-4 text-3xl md:text-4xl text-green-600">
+                    {" "}
+                    <IoLocationOutline />
+                  </span>{" "}
                   Tankisinwari, Nepal
                 </p>
               </div>
             </div>
 
             {/* Connect With Me */}
-            <div className="rounded-xl shadow-md p-6 border-t-10 border-indigo-500">
-              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+            <div className="rounded-xl shadow-md p-6 border-t-10 border-indigo-500 h-58">
+              <h2 className="text-2xl md:text-4xl font-semibold mb-4">
                 Connect With Me
               </h2>
-              <div className="flex flex-col sm:flex-row sm:justify-start sm:gap-8 gap-4">
+              <div className="flex flex-row gap-x-5 flex-wrap md:gap-5">
                 <a
                   href="https://www.linkedin.com/in/nitij-kuwar"
                   className="flex flex-col items-center text-xl md:text-3xl group cursor-pointer"
