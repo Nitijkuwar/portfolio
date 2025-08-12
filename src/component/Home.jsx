@@ -28,6 +28,9 @@ import portfolio from "../assets/image/projects/portfolio.png";
 import portgenerator from "../assets/image/projects/portgenerator.png";
 import ecommerce from "../assets/image/projects/ecommerce.png";
 import pla from "../assets/image/projects/pla.png";
+import blog from "../assets/image/projects/blog.jpg";
+import flowerlandingpage from "../assets/image/projects/flower.png";
+import travelinglandingpage from "../assets/image/projects/travelling.png";
 
 import { IoLocationOutline } from "react-icons/io5";
 
@@ -66,7 +69,7 @@ const Home = () => {
       description: "Built with React.js and Tailwind CSS",
       tech1: "React.js",
       tech2: "Tailwind CSS",
-      link: "https://portfolio-li9t1xnu6-nitijkuwars-projects.vercel.app/",
+      link: "https://www.nitij.com.np/",
     },
     {
       image: portgenerator,
@@ -91,6 +94,30 @@ const Home = () => {
       tech1: "HTML/CSS",
       tech2: "JavaScripts",
       link: "https://nitijkuwar.github.io/plajs/",
+    },
+    {
+      image: blog,
+      name: "Blog Management System",
+      description: "Built with React toolkit and TailwindCSS",
+      tech1: "React",
+      tech2: "TailwindCSS",
+      link: "https://reduxblogms.vercel.app/",
+    },
+    {
+      image: travelinglandingpage,
+      name: "Traveling Landing Page",
+      description: "Built with React and TailwindCSS",
+      tech1: "React",
+      tech2: "TailwindCSS",
+      link: "https://travellandingpage-six.vercel.app/",
+    },
+    {
+      image: flowerlandingpage,
+      name: "Flower Landing Page",
+      description: "Built with React and TailwindCSS",
+      tech1: "React",
+      tech2: "TailwindCSS",
+      link: "https://flowerlandingpage-two.vercel.app/",
     },
   ];
   // form textarea
@@ -236,7 +263,7 @@ const Home = () => {
       {/* skills */}
 
       <motion.section
-        className="relative min-h-screen flex flex-col items-center justify-center "
+        className="relative min-h-screen flex flex-col items-center justify-center p-9"
         id="skills"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -282,7 +309,7 @@ const Home = () => {
       </motion.section>
       {/* projects */}
       <motion.section
-        className=" relative min-h-screen flex flex-col items-center justify-center"
+        className=" relative min-h-screen flex flex-col items-center justify-center p-8"
         id="projects"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
